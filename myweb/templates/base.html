@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../static/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../static/icon/css/all.min.css">
+    <title>To do list app</title>
+  </head>
+  <body>
+
+    <header>
+      <nav class="navbar navbar-expand-lg">
+        <div class="container">
+          <a class="navbar-brand" href="#"></a>
+            <img class=" mt-2 mb-2" src="../static/img/Kafka.png" alt="" height="60px" />
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          
+          <div class="collapse navbar-collapse mt-sm-0 mt-3" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0 me-2 gap-2">
+              {% if username != null %}
+                <li class="nav-item d-flex">
+                    <img style="border-radius: 20px;" src="../static/img/Kafka.png" height="40px" width="40px" class=" object-fit-cover" alt="">
+                    <a class="nav-link fw-medium" aria-current="page" href="#">{{ username }}<i class="fa-solid fa-caret-down ms-2"></i></a>
+                </li>
+              {% endif %}
+              <li class="nav-item d-flex">
+                
+                <a class="nav-link" aria-current="page" href="#"><i class="fa-solid fa-house me-2"></i>Trang chủ</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#"><i class="fa-solid fa-bell me-2"></i>Tin tức</a>
+              </li>
+            </ul>
+            <form class="" role="search">
+              <input class="form-control me-2" type="search" placeholder="Tìm kiếm..." aria-label="Search"/>
+            </form>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main style="background-color: #e7ecf0;">
+     
+        {% block content %}{% endblock %}
+     
+    </main>
+    <footer>
+      <footer>
+        <div class=" p-4 bg-primary-subtle text-center">
+          <p class="mb-0 fw-medium">© 2023 Bản quyền thuộc về <a href="https://www.facebook.com/nnppkkoo00" class=" text-decoration-none text-primary" target="_blank">Okay</a></p>
+        </div>
+      </footer>
+    </footer>
+    <script src="../static/bootstrap/js/bootstrap.min.js"></script>
+    <script src="../static/icon/js/all.min.js"></script>
+  </body>
+</html>
