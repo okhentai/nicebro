@@ -53,5 +53,12 @@ def signup():
         return render_template('signup_success.html', user = user, request = request)
     return render_template('signup.html', request = request, form = form)
 
+@app.route('/signIn', methods = ['GET', 'POST'])
+def signIn():
+    form = SignupForm()
+
+    return render_template('signin.html', form = form)
+
+
 if __name__ == '__main__':
     app.run(debug=True, host='127.0.0.1', port=8080)
